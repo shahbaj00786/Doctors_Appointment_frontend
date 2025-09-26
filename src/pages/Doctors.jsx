@@ -8,6 +8,7 @@ export const Doctors = () => {
   const { doctors } = useContext(AppContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filtDoc, setFiltDoc] = useState([]);
+  
   const navigate = useNavigate();
 
   const applyFilter = () => {
@@ -24,7 +25,7 @@ export const Doctors = () => {
 
   return (
     <div>
-      <p className="text-gray-600 ">Browse through the doctors specialist.</p>
+      <p className="text-gray-600 font-semibold">Browse through the doctors specialist.</p>
       <div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
         <button
           className={`py-1 px-3 border rounded text-sm transition-all sm:hidden ${
@@ -128,7 +129,7 @@ export const Doctors = () => {
             <div
               key={index}
               onClick={() => navigate(`/appointment/ ${item._id}`)}
-              className="border border-blue-300 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
+              className="border border-blue-400 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
             >
               <img
                 className="bg-blue-50 hover:bg-slate-400"
@@ -159,4 +160,3 @@ export const Doctors = () => {
   );
 };
 
-// 8:20

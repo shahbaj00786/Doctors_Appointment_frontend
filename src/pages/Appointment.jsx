@@ -9,10 +9,9 @@ import axios from "axios";
 export const Appointment = () => {
   const navigate = useNavigate();
   const { docId } = useParams();
-  const { doctors, currencySymbol, backendUrl, token, getDoctorsData } =
-    useContext(AppContext);
-
+  const { doctors, currencySymbol, backendUrl, token, getDoctorsData } =useContext(AppContext);
   const [docInfo, setDocInfo] = useState(null);
+
   const [docSlots, setDocSlots] = useState([]);
   const [slotIndex, setSlotIndex] = useState(0);
   const [slotTime, setSlotTime] = useState("");
@@ -134,7 +133,7 @@ export const Appointment = () => {
               alt=""
             />
           </div>
-
+                
           {/* ---------- Doc Info:name , degree experiance -------------- */}
           <div className="flex-1 border border-gray-500 rounded-lg p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0">
             <p className="flex items-center gap-2 text-2xl font-medium text-gray-900">
@@ -160,7 +159,7 @@ export const Appointment = () => {
               </p>
             </div>
             <p className="text-gray-500 font-medium mt-4">
-              Appointment Fee:{" "}
+              Appointment Fee:
               <span className="text-gray-600">
                 {currencySymbol}
                 {docInfo.fees}

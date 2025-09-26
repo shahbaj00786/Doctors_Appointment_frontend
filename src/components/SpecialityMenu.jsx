@@ -1,7 +1,7 @@
-import React from "react";
 import { specialityData } from "../assets/assets";
 import { Link } from "react-router-dom";
 export const SpecialityMenu = () => {
+
   return (
     <div className="flex flex-col items-center gap-4 text-gray-800 ">
       <h1 className="text-3xl font-medium mt-6">Find by Speciality</h1>
@@ -18,7 +18,7 @@ export const SpecialityMenu = () => {
             key={index}
             to={`/doctors/${item.speciality}`}
           >
-            <img className="w-16 sm:w-24 mb-2" src={item.image} alt="" />
+            <img className="w-16 sm:w-24 mb-2 hover:bg-gray-100" src={item.image} alt="" />
             <p>{item.speciality}</p>
           </Link>
         ))}

@@ -46,7 +46,8 @@ export const Login = () => {
     } catch (error) {
       toast.error(error.message);
     }
-  };
+  }
+  
   useEffect(() => {
     if (token) {
       navigate("/");

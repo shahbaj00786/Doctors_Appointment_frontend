@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 
@@ -11,8 +11,7 @@ export const RelatedDoctors = ({ speciality, docId }) => {
   useEffect(() => {
     if (doctors.length > 0 && speciality) {
       const doctorsData = doctors.filter(
-        (doc) => doc.speciality === speciality && doc._id != docId
-      );
+        (doc) => doc.speciality === speciality && doc._id != docId);
       setRelDoc(doctorsData);
     }
   }, [doctors, speciality, docId]);
@@ -57,4 +56,3 @@ export const RelatedDoctors = ({ speciality, docId }) => {
   );
 };
 
-//3:03

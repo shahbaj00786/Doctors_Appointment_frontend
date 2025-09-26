@@ -16,7 +16,7 @@ export const Header = () => {
             Simple browse through our extensive<br/> list of trusted doctors,
           </p>
         </div>
-        <a href="#speciality" className="flex items-center gap-2 px-8 py-3 bg-white rounded-full text-gray-600 text-sm m-auto md:m-0 hover:scale-105 ">
+        <a href="/doctors" className="flex items-center gap-2 px-8 py-3 bg-white rounded-full text-gray-600 text-sm m-auto md:m-0 hover:scale-105 ">
           Book appointment <img src={assets.arrow_icon} alt="" />
         </a>
       </div>
