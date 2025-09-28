@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { assets } from "../assets/assets";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  const adminUrl = import.meta.env.VITE_ADMIN_URL;
 
   const [showMenu, setShowMenu] = useState(false);
   const { token, setToken, userData } = useContext(AppContext);
@@ -45,6 +46,7 @@ export const Navbar = () => {
           <li className="py-1">CONTACT</li>
           <hr className="border-none outline-none h-0.5 bg-sky-400  w-3/5 m-auto hidden" />
         </NavLink>
+        <a className="border-2 bg-gray-300 hover:bg-gray-500 px-3 py-2 mx-3 rounded-lg" href='https://doctors-admin-panel.vercel.app'>Admin Panel</a>
       </ul>
 
       <div className="flex items-center ">
